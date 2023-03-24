@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: NGINX
+    build: ./NGINX
+    ports:
+      - 443:443
+    #volumes:
+    #  - wordpress_data:/var/www/html #persistent volume (create that directory)
+    restart: always
+    networks:
+      - network
+
+  mariadb:
+    container_name: MariaDB
+    build: ./MariaDB
+    #volumes:
+    #  - mariadb_data:/var/lib/mysql #persistent volume (create that directory)
+    networks:
+      - network
+    restart: always
+    env_file:
+      - .env
+
+  wordpress:
+    container_name: WordPress
+    depends_on:
+      - mariadb
+    build:
+      context: ./WordPress
+    restart: always
+    env_file:
+      - .env
+    #volumes:
+    #  - wordpress_data:/var/www/html #persistent volume (create that directory)
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge

@@ -1,6 +1,6 @@
-DOCKER_YML=srcs/docker-compose.yml
+DOCKER_YML=srcs/docker-compose.yaml
 
-all:
+all: $(DOCKER_YML)
 	docker-compose -f $(DOCKER_YML) build
 	docker-compose -f $(DOCKER_YML) up -d
 
