@@ -1,20 +1,17 @@
-DOCKER_YML=srcs/docker-compose.yaml
+PROJECT_NAME = Inception
 
-all: $(DOCKER_YML)
-	docker-compose -f $(DOCKER_YML) build
-	docker-compose -f $(DOCKER_YML) up -d
+all: up
 
 up:
-	docker-compose -f $(DOCKER_YML) up -d
+	@docker-compose -f ./srcs/docker-compose.yml --project-name ${PROJECT_NAME} up --detach 
 
-down :
-	docker-compose -f $(DOCKER_YML) down
+down:
+	@docker-compose -f ./srcs/docker-compose.yml --project-name ${PROJECT_NAME} down
 
-ps :
-	docker-compose -f $(DOCKER_YML) ps
+build:
+	@docker-compose -f srcs/docker-compose.yml --project-name ${PROJECT_NAME} up --detach --build 
 
-clean:
-	docker system prune
+logs:
+	@docker-compose -f srcs/docker-compose.yml --project-name ${PROJECT_NAME} logs
 
-images:
-	docker images
+.PHONY: all up down build logs
