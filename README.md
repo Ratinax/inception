@@ -45,7 +45,7 @@ This project is a 42 project using docker to run a wordpress on a nginx server w
 ### Prerequisites
 
 * [Docker installation](https://docs.docker.com/engine/install/ubuntu/)
-* having a .env wiht:
+* having a .env with:
 ```sh
 DOMAIN_NAME
 MYSQL_HOSTNAME
