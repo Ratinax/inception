@@ -15,7 +15,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -35,7 +34,7 @@ This project is a 42 project using docker to run a wordpress on a nginx server w
 
 ### Built With
 
-* ![Docker](https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg)
+![Docker](https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -45,29 +44,15 @@ This project is a 42 project using docker to run a wordpress on a nginx server w
 ## Getting Started
 ### Prerequisites
 
-* python3
-  ```sh
-  sudo apt-get install python3
-  ```
-
-### Installation
-
-_Installations needed to be done._
-
-1. Pygame
-   ```sh
-   pip3 install pygame
-   ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+* docker
+  [Docker installation](https://docs.docker.com/engine/install/ubuntu/)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 To execute : 
 ```sh
-python3 programme_principal.py
+make
 ``` 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
