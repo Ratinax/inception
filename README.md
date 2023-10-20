@@ -48,7 +48,6 @@ This project is a 42 project using docker to run a wordpress on a nginx server w
 * having a .env wiht:
 ```sh
 DOMAIN_NAME
-
 MYSQL_HOSTNAME
 MYSQL_DATABASE
 MYSQL_USER
